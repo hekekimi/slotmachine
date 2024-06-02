@@ -154,7 +154,7 @@ function unlockReel(index) {//lukituksen poisto
     }
 }
 
-function toggleLockButtons(enable) {//ottaa käyttöön tai estää lukitusnapit
+export function toggleLockButtons(enable) {//ottaa käyttöön tai estää lukitusnapit
     for (let i = 0; i < 4; i++) {
         const button = document.getElementById(`lukitse-button-${i}`);
         if (button) {
