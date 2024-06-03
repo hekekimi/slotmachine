@@ -23,6 +23,23 @@ body {
 
 }
 
+#table-button{
+    
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(to left, #fa8c0e,#fad70e);
+
+
+
+}
+#taulukko {
+    position: absolute;
+   
+}
+.hidden {
+    display: none;
+}
 label {
     color: #fa8c0e;
     font-family: 'Atma', sans-serif;
@@ -114,7 +131,10 @@ button {
 
     transform: translateY(3px);
 }
-
+#taulukko{
+    border-radius: 10px;
+    opacity: 0.95;
+}
 
 
 #saldo_naytto{
@@ -225,6 +245,9 @@ button {
     }
     #panos{
         margin-top: 5px;
+    }
+    #taulukko{
+        max-width: 90%;
     }
 
 

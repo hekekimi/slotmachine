@@ -4,7 +4,7 @@
 import { messages, pelaaPainike } from "./messages.js";
 import { saldo_naytto, pelaa_painike, viesti } from "./main.js";
 
-
+//muuttujat
 let panos = 0.5;
 //elementit
 const panos_painike = document.getElementById("panos");
@@ -19,7 +19,7 @@ let panos_asetettu = false;
 panos_painike.addEventListener("click",setBet);
 
 
-export function setBet(){
+export function setBet(){//aseta panos
     let currentSaldo = getSaldo();
     panos += 0.50;
     panos_asetettu = true;
@@ -42,7 +42,7 @@ export function setBet(){
 }
 
 
-export function chargePlayer(){
+export function chargePlayer(){//veloita pelaajaa
     
 
     let currentSaldo = getSaldo();
@@ -57,12 +57,9 @@ export function getBet(){
     return panos;
 }
 
-/*export function checkSaldo(){
-    
 
-}*/
 
-export function checkBetandSaldo(){
+export function checkBetandSaldo(){//tarkista onko panos asetettu ja ettei se ole suurempio kuin saldo
     getBet();
     let currentSaldo = getSaldo();
     if(!panos_asetettu || panos > currentSaldo){
@@ -78,9 +75,9 @@ export function checkBetandSaldo(){
 
 
 
-export function depositCash(){
+export function depositCash(){//talleta rahaa
     const talletaArvo = document.getElementById("talleta").value.trim();
-    const arvoTesti = /^\d+(\.\d{1,2})?$/;
+    const arvoTesti = /^\d+(\.\d{1,2})?$/;//onko sopivat merkit
     
     if(arvoTesti.test(talletaArvo)){
         const talletaLuku = parseFloat(talletaArvo,10);
@@ -104,7 +101,7 @@ export function getSaldo(){
     return saldo;
 }
 
-export function updateSaldo(voitto){
+export function updateSaldo(voitto){//päivitä saldo 
 
     saldo += voitto;
     saldo_naytto.innerHTML = `Saldosi on ${saldo.toFixed(2)} €`;

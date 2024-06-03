@@ -7,60 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 id="otsikko">Slot Machine</h1>
-<div id="ilmoitus">
-    <p></p>
-</div>
-<div class="talleta_rahaa">
-    <label for="talleta">Talleta rahaa</label>
-    <input name="talleta" type="text" id = "talleta">
-    <button id="paina_ja_talleta">Talleta!</button>
-    <p id="message"></p>
-</div>
+    <button id="table-button">Näytä voittotaulukko</button>
+    <h1 id="otsikko">Slot Machine</h1>
+    <div id="ilmoitus">
+        <p></p>
+    </div>
+    <div class="talleta_rahaa">
+        <label for="talleta">Talleta rahaa</label>
+        <input name="talleta" type="text" id="talleta">
+        <button id="paina_ja_talleta">Talleta!</button>
+        <p id="message"></p>
+    </div>
 
-
-<div class="slots">
-    <div class="reels">
-        <div class="reel" data-index="0">
-            <img id="img1" src="assets/0.png">
-            <button class="lock-button" id="lukitse-button-0" onclick="toggleLock([0])">LUKITSE</button>
-        </div>
-
-        <div class="reel" data-index="1">
-            <img id="img2" src="assets/1.png">
-            <button class="lock-button" id="lukitse-button-1" onclick="toggleLock([1])">LUKITSE</button>
-        </div>
-        <div class="reel" data-index="2">
-            <img id="img3" src="assets/3.png">
-            <button class="lock-button" id="lukitse-button-2" onclick="toggleLock([2])">LUKITSE</button>
-        </div>
-        <div class="reel" data-index="3">
-            <img id="img4" src="assets/4.png">
-            <button class="lock-button" id="lukitse-button-3" onclick="toggleLock([3])">LUKITSE</button>
+    <div class="slots">
+        <div class="reels">
+            <div class="reel" data-index="0">
+                <img id="img1" src="assets/0.png">
+                <button class="lock-button" id="lukitse-button-0" onclick="toggleLock([0])">LUKITSE</button>
+            </div>
+            <div class="reel" data-index="1">
+                <img id="img2" src="assets/1.png">
+                <button class="lock-button" id="lukitse-button-1" onclick="toggleLock([1])">LUKITSE</button>
+            </div>
+            <div class="reel" data-index="2">
+                <img id="img3" src="assets/3.png">
+                <button class="lock-button" id="lukitse-button-2" onclick="toggleLock([2])">LUKITSE</button>
+            </div>
+            <div class="reel" data-index="3">
+                <img id="img4" src="assets/4.png">
+                <button class="lock-button" id="lukitse-button-3" onclick="toggleLock([3])">LUKITSE</button>
+            </div>
         </div>
     </div>
-</div>
 
+    <img src="assets/table.png" id="taulukko" class="hidden" alt="Voittotaulukko">
 
+    <button id="pelaa">PELAA</button>
+    <button id="panos">Aseta panos</button>
+    <p id="panos_naytto"></p>
 
+    <div id="result"></div>
+    <h2 id="saldo_naytto"></h2>
 
-
-
-
-<button id="pelaa">PELAA</button>
-<button id="panos">Aseta panos</button>
-<p id="panos_naytto"></p>
-
-
-
-<div id="result"></div>
-<h2 id="saldo_naytto"></h2>
-
-
-
-
-
-
-<script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>
+    <script src="table.js"></script>
 </body>
 </html>

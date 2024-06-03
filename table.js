@@ -3,7 +3,7 @@ const table = document.getElementById('taulukko');
 button.addEventListener("click",showTable);
 
 
-function showTable(){
+function showTable(){//voittotaulukon näyttö napilla
 
     if (table.classList.contains("hidden")) {
         table.classList.remove("hidden");

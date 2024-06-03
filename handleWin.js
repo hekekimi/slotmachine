@@ -15,7 +15,7 @@ export function checkWin(rulla1,rulla2,rulla3,rulla4){
     
     const tulos = checkReels(rullat,rullat[0]);
 
-    function checkSevens(rullat){
+    function checkSevens(rullat){//laske seiskojen määrä onko vähintään kolme
         let seiskat = 0;
         let arvo = 6;
         rullat.forEach(rulla => {
@@ -33,10 +33,10 @@ export function checkWin(rulla1,rulla2,rulla3,rulla4){
 
 
     
-    if(tulos && rullat[0] ===0){
-        messages.win(6);
-        updateSaldo(6 * getBet());
-        toggleLockButtons(!enable);
+    if(tulos && rullat[0] ===0){//voittojen tarkistus ja maksu
+        messages.win(6);// voitto * panos
+        updateSaldo(6 * getBet());//päivitä saldo
+        toggleLockButtons(!enable);//jos voitto, ei voi lukita
         
     }
 
@@ -89,7 +89,7 @@ export function checkWin(rulla1,rulla2,rulla3,rulla4){
 
 
     else{
-        messages.noWin();
+        messages.noWin();//ei voittoa
         ilmoitus.classList.remove("animate");
         void ilmoitus.offsetLeft;
         ilmoitus.classList.add("animate");
