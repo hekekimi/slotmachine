@@ -11,7 +11,7 @@ export function pelaaPainike(arvo){
 
 
 
-
+//viestit
 export const messages = {
     saldo0() {
         ilmoitus.innerHTML = "Saldosi ei riitä pyöräytykseen, pienennä panosta tai tee talletus!";
