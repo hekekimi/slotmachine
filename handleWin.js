@@ -1,9 +1,10 @@
+//importit
 import { updateSaldo } from "./handleBets.js";
 import { getBet } from "./handleBets.js";
 import { ilmoitus,messages} from "./messages.js";
 import { toggleLockButtons } from "./gameLogic.js";
-
-export function checkWin(rulla1,rulla2,rulla3,rulla4){
+//exportit
+export function checkWin(rulla1,rulla2,rulla3,rulla4){//voiton tarkistusfunktio
     
     const rullat = [rulla1,rulla2,rulla3,rulla4];
 
@@ -11,7 +12,6 @@ export function checkWin(rulla1,rulla2,rulla3,rulla4){
         return rullat.every(num => num === luku);
         
     }
-    
     
     const tulos = checkReels(rullat,rullat[0]);
 
@@ -31,8 +31,6 @@ export function checkWin(rulla1,rulla2,rulla3,rulla4){
 
     }
 
-
-    
     if(tulos && rullat[0] ===0){//voittojen tarkistus ja maksu
         messages.win(6);// voitto * panos
         updateSaldo(6 * getBet());//päivitä saldo
